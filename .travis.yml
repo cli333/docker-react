@@ -9,4 +9,4 @@ before_install:
 
 # travis runs test and exits
 script:
-  - docker run cli333/docker-react npm run test -- --coverage
+  - docker run cli333/docker-react npm run test --coverage
