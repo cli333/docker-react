@@ -8,5 +8,6 @@ before_install:
   - docker build -t cli333/docker-react -f Dockerfile.dev .
 
 # travis runs test and exits
+# special flag to exit immediately, otherwise hangs
 script:
-  - docker run cli333/docker-react npm run test --coverage
+  - docker run -e CI=true cli333/docker-react npm run test -- --coverage
