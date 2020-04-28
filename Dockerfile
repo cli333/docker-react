@@ -1,7 +1,7 @@
 # build phase
 FROM node:alpine as builder
 WORKDIR /usr/app
-COPY . .
+COPY ./ ./
 RUN npm install
 RUN npm run build
 
