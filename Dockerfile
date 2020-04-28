@@ -9,6 +9,7 @@ RUN npm run build
 
 # run phase
 FROM nginx
+EXPOSE 80
 COPY --from=builder /usr/app/build /usr/share/nginx/html
 # copy build folder from build phase to specific nginx folder
 # nginx by default will run!
